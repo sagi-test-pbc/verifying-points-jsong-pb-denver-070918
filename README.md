@@ -37,28 +37,3 @@ for x_raw, y_raw in points:
     # try initializing, RuntimeError means not on curve
     # p = Point(x, y, a, b)
 ```
-
-### Test Driven Exercise
-
-
-```python
-# from ecc import FieldElement, Point
-
-# class Point(Point):
-
-#     def __init__(self, x, y, a, b):
-#         self.a = a
-#         self.b = b
-#         self.x = x
-#         self.y = y
-#         # x being None and y being None represents the point at infinity
-#         # Check for that here since the equation below won't make sense
-#         # with None values for both.
-#         if self.x is None and self.y is None:
-#             return
-#         # make sure that the elliptic curve equation is satisfied
-#         # y**2 == x**3 + a*x + b
-#         if self.y**2 != self.x**3 + a*x + b:
-#         # if not, throw a RuntimeError
-#             raise RuntimeError('({}, {}) is not on the curve'.format(self.x, self.y))
-```
